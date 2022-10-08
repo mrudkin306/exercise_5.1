@@ -1,0 +1,13 @@
+import time
+
+epoch = time.time()
+seconds_in_day = 24 * 60 * 60
+seconds_in_hour = 60 * 60
+seconds_in_min = 60
+
+days = epoch // seconds_in_day
+hours = (epoch % seconds_in_day) // seconds_in_hour
+minutes = (epoch % seconds_in_day) % seconds_in_hour // seconds_in_min
+seconds = (epoch % seconds_in_day) % seconds_in_hour % seconds_in_min
+
+print("Hours:", hours, "Minutes:", minutes, "Seconds:", seconds, "Days Since Epoch:", days)
